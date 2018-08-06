@@ -46,11 +46,11 @@ Please note that Unity WebGL is not currently supported on mobiles.
 Press OK if you wish to cointinue anyway.
 ```
 
-何でか、下のゴーグルアイコンも見えなくなったしよくわからない。
+~~何でか、下のゴーグルアイコンも見えなくなったしよくわからない。~~
 
-**UICanvas無効化コミット**で何かが起きている。
+~~**UICanvas無効化コミット**で何かが起きている。~~
 
-1. TemplateDataの出現、何故だ…？
+~~1. TemplateDataの出現、何故だ…？~~
 
 ## これは解決した
 
