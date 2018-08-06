@@ -4,6 +4,8 @@
 
 アップロードする実験用のリポジトリである。8/6時点で最新のものである。
 
+[gh-pagesリンク] (https://akio-okumura.github.io/ShootingWebGL/)
+
 # 問題点
 
 MozillaのWebVRアセットをそのまま使えば、UnityコンテンツをWebVR化出来るが、
