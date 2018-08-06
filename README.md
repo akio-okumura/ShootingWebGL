@@ -77,3 +77,39 @@ PlayerSettingの、WebGLTenplateがDefaultになってしまっていたので�
 - 差異は、Build内の.unityweb4つと、.jsonにありました。
 
 その為、この2つのプロジェクト間で生まれている差は、**Unityエディタで編集して解決可能。**
+
+# Build実験
+
+- WebVRShootingプロジェクト内の、WebVRシーンをビルド -> 出来ない
+
+  これより、サバイバルシューターを入れる時に、**既に何かが壊れてる可能性**
+
+- Testagainプロジェクト**(これはVR化が出来るプロジェクトです)**で、[Cubeのシーンを作成しビルド](https://github.com/akio-okumura/CubeRepository/tree/gh-pages)
+
+ これはVR化出来た。
+
+- 0806Testプロジェクト。Learnからサバイバルシューターを選び、プロジェクト保存。
+
+  選んだ時に、**API Update Required**が出てくるので、**Go,Ahead!**した。
+
+  その後に、MozillaのアセットをImportしてwebVRシーンをいつものように配置。
+
+  そのままWebGLでビルド。
+
+  **サバイバルシューターをインポート、Mozillaアセット入れてビルドしただけのやつ**
+
+  (https://github.com/akio-okumura/0806Test/tree/gh-pages)
+
+  ## VR化出来ません
+
+___
+
+## 実験結論
+
+- シンプルにWebVRアセットをビルド -> **VR化可能**
+
+- サバイバルシューターをインポートしてから、WebVRアセット -> VR化不可能
+
+  - この原因は不明であるが、サバイバルシュータープロジェクトのビルド設定か奥の方で、WebVRを妨げるようなことが起きていると判断
+
+- 自分でプロジェクトを作成、WebVRアセットをインポートしてビルド -> **VR化可能**
