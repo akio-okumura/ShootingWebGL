@@ -35,3 +35,9 @@ ___
 - シーンを開いてから、GAMEOVERになるまでなら、Escapeによるステレオ化は上手く行くが、
 
 　　ゲームオーバー後はMainCameraのままなので、シーン遷移辺りにこれは問題がありそう。
+
+- HUD Canvasを非アクティブにしたら、ブラウザで上手く動かなくなった、初めてのパターン。
+
+~~~Please note that Unity WebGL is not currently supported on mobiles.
+
+Press OK if you wish to cointinue anyway.~~~
