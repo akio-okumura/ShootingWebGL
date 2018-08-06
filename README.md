@@ -36,6 +36,8 @@ ___
 
 　　ゲームオーバー後はMainCameraのままなので、シーン遷移辺りにこれは問題がありそう。
 
+___
+
 - HUD Canvasを非アクティブにしたら、ブラウザで上手く動かなくなった、初めてのパターン。
 
 ```
@@ -49,3 +51,7 @@ Press OK if you wish to cointinue anyway.
 **UICanvas無効化コミット**で何かが起きている。
 
 1. TemplateDataの出現、何故だ…？
+
+## これは解決した
+
+PlayerSettingの、WebGLTenplateがDefaultになってしまっていたので、WebVRに変更で解決。
