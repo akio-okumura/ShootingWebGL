@@ -55,3 +55,25 @@ Press OK if you wish to cointinue anyway.
 ## これは解決した
 
 PlayerSettingの、WebGLTenplateがDefaultになってしまっていたので、WebVRに変更で解決。
+
+# Shootingと、砂漠のWebGLの違い
+
+- webvr.js -> 相違点は検出されませんでした。
+
+- index.html -> 11,12行目のタイトル、descriptionがそれぞれで違う。
+
+```
+<title>Sunny Desert | Testagain</title>
+<meta name="description" content="Complete interactive 3D scene demo made in Unity and exported to WebVR with the WebVR template of the Unity WebVR assets">
+```
+  -> 31行目の`window.gameInstance = UnityLoader.instantiate('gameContainer', 'Build/webVR.json', {`
+
+    ここは、Build/"フォルダ名".jsonになるので関係ない。
+
+- sw.js -> 相違点は検出されませんでした。
+
+- Build内の、UnityLoader.js -> 相違点は検出されませんでした。
+
+- 差異は、Build内の.unityweb4つと、.jsonにありました。
+
+その為、この2つのプロジェクト間で生まれている差は、**Unityエディタで編集して解決可能。**
