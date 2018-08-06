@@ -121,8 +121,8 @@
       return vrDisplay.requestPresent([{source: canvas}]).then(function () {
         // Start stereo rendering in Unity.
         console.log('Entered VR mode');
-        gameInstance.SendMessage('WebVRCameraSet', 'toggleVrState');
-        //gameInstance.SendMessage('WebVRCameraSet', 'OnStartVR');
+        //gameInstance.SendMessage('WebVRCameraSet', 'toggleVrState');
+        gameInstance.SendMessage('WebVRCameraSet', 'OnStartVR');
       }).catch(function (err) {
         console.error('Unable to enter VR mode:', err);
       });
