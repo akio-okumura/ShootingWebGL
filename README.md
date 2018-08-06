@@ -4,7 +4,7 @@
 
 アップロードする実験用のリポジトリである。8/6時点で最新のものである。
 
-[gh-pagesリンク] (https://akio-okumura.github.io/ShootingWebGL/)
+[gh-pagesリンク](https://akio-okumura.github.io/ShootingWebGL/)
 
 # 問題点
 
