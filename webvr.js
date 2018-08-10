@@ -82,7 +82,8 @@
           if (!submittingFrames && unityLoaded) {
             submittingFrames = true;
             onResize();
-            gameInstance.SendMessage('WebVRCameraSet', 'OnStartVR');
+            // gameInstance.SendMessage('WebVRCameraSet', 'OnStartVR');
+            gameInstance.SendMessage('transmit', 'Transmit_OnStartVR');
           }
         }
       }
@@ -121,7 +122,9 @@
       return vrDisplay.requestPresent([{source: canvas}]).then(function () {
         // Start stereo rendering in Unity.
         console.log('Entered VR mode');
-        gameInstance.SendMessage('WebVRCameraSet', 'OnStartVR');
+        // gameInstance.SendMessage('WebVRCameraSet', 'OnStartVR');
+        // OnStartVRを媒介する
+        gameInstance.SendMessage('transmit', 'Transmit_OnStartVR');
       }).catch(function (err) {
         console.error('Unable to enter VR mode:', err);
       });
@@ -135,7 +138,8 @@
     }
     function done () {
       // End stereo rendering in Unity.
-      gameInstance.SendMessage('WebVRCameraSet', 'OnEndVR');
+      // gameInstance.SendMessage('WebVRCameraSet', 'OnEndVR');
+      gameInstance.SendMessage('transmit', 'Transmit_OnEndVR');
       onResize();
     }
     return vrDisplay.exitPresent().then(function () {
@@ -257,7 +261,8 @@
           controllers: getVrGamepads(navigator.getGamepads())
         };
 
-        gameInstance.SendMessage('WebVRCameraSet', 'OnWebVRData', JSON.stringify(vrData));
+        // gameInstance.SendMessage('WebVRCameraSet', 'OnWebVRData', JSON.stringify(vrData));
+        gameInstance.SendMessage('transmit', 'Transmit_OnWebVRData', JSON.stringify(vrData));
       }
 
       if (!vrDisplay.isPresenting || isPolyfilled(vrDisplay)) {
@@ -294,13 +299,15 @@
   }
 
   function togglePerf() {
-    gameInstance.SendMessage('WebVRCameraSet', 'TogglePerf');
+    // gameInstance.SendMessage('WebVRCameraSet', 'TogglePerf');
+    gameInstance.SendMessage('transmit', 'Transmit_TogglePerf' );
   }
 
   function testRoundtripTime() {
     console.log('Testing roundtrip time...');
     testTimeStart = window.performance.now();
-    gameInstance.SendMessage('WebVRCameraSet', 'TestTime');
+    // gameInstance.SendMessage('WebVRCameraSet', 'TestTime');
+    gameInstance.SendMessage('transmit', 'Transmit_TestTime' );
   }
 
   function showInstruction (el) {
